@@ -106,6 +106,30 @@
 	position: relative;
 	margin-top: 40px;
 }
+
+.agreement {
+	font-size: 12px;
+	margin-top: 15px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.6); /* полупрозрачный белый */
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+.agreement a {
+	color: #ffffff;
+	text-decoration: underline;
+	transition: color 0.3s ease;
+}
+
+.agreement a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
 @media screen and (max-width: 710px) {
 	.name_errors {
 	color: #f52137;

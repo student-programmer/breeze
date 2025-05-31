@@ -40,7 +40,7 @@ export const MainForm = () => {
 			.then(() => {
 				toggleModal(modal);
 				setTimeout(() => toggleModal(!modal), 10000);
-				ym(96899203, 'reachGoal', 'submit')
+				ym(96899203, 'reachGoal', 'submit');
 			});
 
 		reset();
@@ -49,10 +49,7 @@ export const MainForm = () => {
 
 	return (
 		<div className={c.cont} id='application'>
-			<form
-				onSubmit={handleSubmit(Submit)}
-				className={c.form}
-			>
+			<form onSubmit={handleSubmit(Submit)} className={c.form}>
 				<h1 className={c.zag}> Закажите звонок</h1>
 				<p className={c.parag}>
 					Оставьте контакты, по которым мы можем с вами связаться, наши
@@ -106,8 +103,15 @@ export const MainForm = () => {
 						</p>
 					)}
 				</div>
-
 				<button className={c.btn}>Оставить заявку</button>
+				<p className={c.agreement}>
+					Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+					и&nbsp;
+					<a href='/docs/privacy.pdf' target='_blank' rel='noopener noreferrer'>
+						принимаете политику конфиденциальности
+					</a>
+					.
+				</p>
 				{modal && <Modal toggleModal={toggleModal} />}
 			</form>
 		</div>
